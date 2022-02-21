@@ -1,0 +1,30 @@
+.header-contact {
+    @include centeredFlex(flex, center, null);
+    margin-left: auto;
+}
+
+.header-contact__item:not(:first-child) {
+    margin-left: 50px;
+}
+
+.header-contact__link-mail,
+.header-contact__link-tel {
+    @include centeredFlex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--primary-text-color);
+    @include font(null, 500, 14px, 1.14, 0.02em);
+
+    transition: color 250ms var(--timing-function);
+
+    &:hover, &:focus { 
+        color: var(--accent-color);
+    }
+}
+
+.header-contact__icon-mail,
+.header-contact__icon-tel {
+    margin-right: 10px;
+    fill: currentColor;
+}

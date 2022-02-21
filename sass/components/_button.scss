@@ -1,0 +1,16 @@
+.button {
+    display: inline-block;
+    @include button;
+
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    font-family: inherit;
+    @include font(null, 700, 16px, 1.87, 0.06em);
+    text-align: center;
+
+    transition: background-color 250ms var(--timing-function);
+
+    &:hover, &:focus {
+        background-color: var(--background-color-btn-order);
+    }
+}

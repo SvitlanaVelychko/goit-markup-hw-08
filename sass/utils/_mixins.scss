@@ -1,0 +1,23 @@
+@mixin centeredFlex($type:flex, $al-it:center, $jc:center) {
+    display: $type;
+    align-items: $al-it;
+    justify-content: $jc;
+}
+
+@mixin font($fs, $fw, $fz, $lh, $ls) {
+    font-style: $fs;
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+
+@mixin button {
+    min-width: 200px;
+    border: none;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}

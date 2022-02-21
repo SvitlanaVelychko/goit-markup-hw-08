@@ -1,0 +1,22 @@
+.footer-social__text {
+    margin-bottom: 20px;
+
+    @include font(null, 700, 14px, 1.14, null);
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.footer-social__link {
+    background-color: var(--icon-background-footer);
+    color: var(--white-color);
+
+    transition: background-color 250ms var(--timing-function);
+
+    &:hover, &:focus {
+        background-color: var(--accent-color);
+    }
+}
+
+.footer-social__icon {
+    fill: currentColor;
+}

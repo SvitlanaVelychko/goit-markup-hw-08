@@ -1,0 +1,40 @@
+.site-nav {
+    @include centeredFlex(flex, center, null);
+    margin-left: 93px;
+} 
+
+.site-nav__item:not(:first-child) {
+    margin-left: 50px;
+}
+
+.site-nav__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--title-text-color);
+    @include font(null, 500, 14px, 1.14, 0.02em);
+
+    transition: color 250ms var(--timing-function);
+
+    &:hover, &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.site-nav__link--current {
+    position: relative;
+    color: var(--accent-color);
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--accent-color);
+    }
+}

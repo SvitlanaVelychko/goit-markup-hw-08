@@ -1,0 +1,11 @@
+.header {
+    border-bottom: 1px solid var(--border-header-color);
+}
+
+.header-container {
+    @include centeredFlex(flex,center, null);
+}
+
+.header-nav {
+    @include centeredFlex(flex,center, null);
+}

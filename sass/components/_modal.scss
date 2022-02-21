@@ -1,0 +1,81 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-overlay-modal);
+    opacity: 1;
+
+    transition: opacity 250ms var(--timing-function),
+    visibility 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    display: block;
+    width: 528px;
+    min-height: 581px;
+    padding: 40px;
+    border-radius: 4px;
+
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    transition: transform 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.modal-close-btn__icon {
+    fill: var(--black-color);
+    transition: fill 250ms var(--timing-function);
+
+    .modal-close-btn:focus &,
+    .modal-close-btn:hover & {
+        fill: var(--accent-color);
+    }
+}
+
+.modal-form__title {
+    margin-bottom: 12px;
+    @include font(null, 700, 20px, 1.15, null);
+    text-align: center;
+    color: var(--title-text-color);
+}
+
+.modal-form__button {
+    padding-left: 56px;
+    padding-right: 55px;
+    margin-top: 30px;
+}

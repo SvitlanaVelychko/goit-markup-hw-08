@@ -1,0 +1,44 @@
+.footer-form {
+    margin-left: auto;
+}
+
+.footer-form__text {
+    margin-bottom: 20px;
+
+    @include font(null, 700, 14px, 1.14, null);
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.email-form {
+    display: flex;
+}
+.email-form__label {
+    margin-right: 12px;
+}
+
+.email-form__input {
+    display: inline-block;
+    width: 358px;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+
+    @include font(null, null, 16px, 1.25, null);
+    color: var(--text-adress-color);
+    background-color: var(--background-footer-color);
+}
+
+.email-form__btn {
+    padding: 0;
+    @include centeredFlex(inline-flex);
+}
+
+.email-form__icon {
+    margin-left: 10px;
+    fill: var(--white-color);
+}

@@ -1,0 +1,13 @@
+.logo {
+    @include font(null, 700, 26px, 1.19, 0.03em);
+    font-family: Raleway;
+    color: var(--accent-color);
+}
+
+.logo__studio {
+    color: var(--black-color);
+
+    &--inverse {
+        color: var(--white-color);
+    }
+}
