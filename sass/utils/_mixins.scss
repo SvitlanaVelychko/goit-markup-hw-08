@@ -21,3 +21,9 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
+
+@mixin media($size) {
+    @media screen and (min-width:$size) {
+        @content;
+    }
+}

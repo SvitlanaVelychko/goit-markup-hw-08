@@ -1,16 +1,17 @@
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
+    text-align: center;
 
     background-color: var(--background-footer-color);
 }
 
 .footer__container {
-    @include centeredFlex(flex, baseline, null);
+    /*@include centeredFlex(flex, baseline, null);*/
 }
 
 .address-block {
-    margin-right: 70px;
+    /*margin-right: 70px;*/
 }
 
 .address-block__logo {
@@ -18,15 +19,16 @@
 }
 
 .address-list {
-    width: 231px;
+    margin-bottom: 60px;
+    /*width: 231px;*/
 }
 
 .address-list__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    /*margin-bottom: 9px;*/
 }
 
 .address-list__link {
-    display: block;
     color: var(--white-color);
     @include font(normal, null, 14px, 1.71, null);
 
@@ -39,7 +41,6 @@
 
 .address-list__link-mail,
 .address-list__link-tel {
-    display: block;
     color: var(--text-adress-color);
     transition: color 250ms var(--timing-function);
 

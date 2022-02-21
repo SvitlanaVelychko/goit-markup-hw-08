@@ -1,12 +1,25 @@
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-&__title {
-    margin-bottom: 50px;
+    &__title {
+        margin-top: 0;
+        margin-bottom: 30px;
 
-    color: var(--title-text-color);
-    @include font(null, null, 36px, 1.17, null);
-    text-align: center;    
+        color: var(--title-text-color);
+        @include font(null, null, 28px, 1.18, null);
+        text-align: center; 
+    }
+}
+
+@include media(1200px) {
+    .section {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    
+        &__title {
+            margin-bottom: 50px;
+            @include font(null, null, 36px, 1.17, null);
+        }
     }
 }
