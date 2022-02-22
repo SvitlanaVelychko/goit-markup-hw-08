@@ -4,28 +4,56 @@
     text-align: center;
 
     background-color: var(--background-footer-color);
+
+    @include desk {
+        text-align: left;
+    }
 }
 
 .footer__container {
-    /*@include centeredFlex(flex, baseline, null);*/
+    @include tab {
+        @include centeredFlex(flex, baseline, null);
+        flex-wrap: wrap;
+    }
+
+    @include desk {
+        @include centeredFlex(flex, baseline, null);
+    }
 }
 
 .address-block {
-    /*margin-right: 70px;*/
+    @include tab {
+        margin-left: 61px;
+    }
+
+    @include desk {
+        margin-right: 70px;
+        margin-left: 0;
+    }
 }
 
 .address-block__logo {
-    margin-bottom: 20px;
+    display: inline-block;
 }
 
 .address-list {
+    width: 232px;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 60px;
-    /*width: 231px;*/
+
+    @include desk {
+        width: 231px;
+        margin: 0;
+    }
 }
 
 .address-list__item:not(:last-child) {
     margin-bottom: 8px;
-    /*margin-bottom: 9px;*/
+
+    @include desk {
+        margin-bottom: 9px;
+    }
 }
 
 .address-list__link {

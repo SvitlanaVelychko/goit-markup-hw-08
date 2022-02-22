@@ -1,19 +1,18 @@
 .container {
-    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
 
-    @include media(480px) {
+    @include mob {
         width: 480px;
     }
     
-    @include media(768px) {
+    @include tab {
         width: 768px;
     }
 
-    @include media(1200px) {
+    @include desk {
         width: 1200px;
     }
 }

@@ -1,5 +1,17 @@
 .footer-social {
+    width: 206px;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 60px;
+
+    @include tab {
+        margin-right: 74px;
+        margin-bottom: 0;
+    }
+
+    @include desk {
+        margin: 0;
+    }
 }
 
 .footer-social__text {

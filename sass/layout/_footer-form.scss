@@ -1,5 +1,15 @@
 .footer-form {
-    /*margin-left: auto;*/
+    @include tab {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include desk {
+        width: 570px;
+        margin-left: auto;
+        margin-right: 0;
+    }
 }
 
 .footer-form__text {
@@ -11,10 +21,15 @@
 }
 
 .email-form {
-    /*display: flex;*/
+    @include desk {
+        display: flex;
+    }
 }
+
 .email-form__label {
-    /*margin-right: 12px;*/
+    @include desk {
+        margin-right: 12px;
+    }
 }
 
 .email-form__input {
@@ -32,6 +47,11 @@
     @include font(null, null, 16px, 1.25, null);
     color: var(--text-adress-color);
     background-color: var(--background-footer-color);
+
+    @include desk {
+        width: 358px;
+        margin-bottom: 0;
+    }
 }
 
 .email-form__btn {
