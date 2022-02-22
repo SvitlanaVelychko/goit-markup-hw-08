@@ -1,9 +1,11 @@
 .section {
+    width: 100%;
+    height: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
+    outline: 1px solid red;
 
     &__title {
-        margin-top: 0;
         margin-bottom: 30px;
 
         color: var(--title-text-color);
@@ -12,11 +14,11 @@
     }
 }
 
-@include media(1200px) {
+@media screen and (min-width: 1200px) {
     .section {
         padding-top: 94px;
         padding-bottom: 94px;
-    
+
         &__title {
             margin-bottom: 50px;
             @include font(null, null, 36px, 1.17, null);
