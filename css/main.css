@@ -90,9 +90,11 @@ body {
 }
 
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media screen and (min-width: 480px) {
@@ -246,12 +248,13 @@ body {
   line-height: 1.62;
   letter-spacing: 0.06em;
   color: var(--white-color);
+  text-align: center;
   text-transform: uppercase;
 }
 
 @media screen and (min-width: 480px) {
   .hero {
-    width: 480px;
+    max-width: 480px;
   }
   .hero__title {
     width: 360px;
@@ -260,13 +263,13 @@ body {
 
 @media screen and (min-width: 768px) {
   .hero {
-    width: 768px;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
-    width: 1600px;
+    max-width: 1600px;
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -525,7 +528,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    margin-bottom: 0;
   }
 }
 

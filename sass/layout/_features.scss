@@ -3,6 +3,7 @@
         padding-bottom: 0;
     }
 }
+
 .feature-list{
     margin-bottom: -30px;
 
@@ -15,7 +16,6 @@
     @include media(1200px) {
         @include centeredFlex;
         flex-wrap: nowrap;
-        margin-bottom: 0;
     }
 }
 

@@ -1,7 +1,9 @@
 .container {
+    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
 
     @include media(480px) {
         width: 480px;
