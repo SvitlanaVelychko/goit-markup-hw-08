@@ -1,21 +1,32 @@
 .checkbox {
     position: relative;
     @include centeredFlex(inline-flex, center, right);
-    width: 370px;
-    /*width: 423px;*/
+    max-width: 370px;
+    width: 100%;
+
+    @include desk {
+        max-width: 425px;
+    }
 }
 
 .checkbox__text {
-    width: 346px;
-    @include font(null, null, 14px, 1.17, null);
-    /*@include font(null, null, 14px, 1.71, null);*/
+    @include font(null, null, 12px, 1.17, null);
     color: var(--primary-text-color);
+
+    @include desk {
+        @include font(null, null, 14px, 1.71, null);
+    }
 }
 
 .checkbox__link {
     display: inline-block;
     text-decoration: underline;
     color: var(--accent-color);
+    @include font(null, null, 12px, 1.17, null);
+
+    @include desk {
+        @include font(null, null, 14px, 1.71, null);
+    }
 }
 
 .checkbox__input {
@@ -23,13 +34,14 @@
     -moz-appearance: none;
     -appearance: none;
 }
+
 .checkbox__icon {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
 
-    margin-right: 7px;
+    margin-right: 8px;
     border: 2px solid var(--title-text-color);
     border-radius: 2px;
     background-color: transparent;

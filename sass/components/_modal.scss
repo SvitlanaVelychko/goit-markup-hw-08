@@ -25,9 +25,8 @@
     transform: translate(-50%, -50%) scale(1);
 
     display: block;
-    width: 450px;
-    /*width: 528px;
-    min-height: 581px;*/
+    max-width: 450px;
+    width: 100%;
     padding: 40px;
     border-radius: 4px;
 
@@ -41,6 +40,12 @@
 
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+
+@include desk {
+    .modal {
+        max-width: 528px;
     }
 }
 
@@ -71,9 +76,12 @@
 .modal-form__title {
     margin-bottom: 12px;
     @include font(null, 700, 20px, 1.5, null);
-    /*@include font(null, 700, 20px, 1.15, null);*/
     text-align: center;
     color: var(--title-text-color);
+
+    @include desk {
+        @include font(null, 700, 20px, 1.15, null);
+    }
 }
 
 .modal-form__button {

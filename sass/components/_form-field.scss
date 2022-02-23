@@ -69,7 +69,11 @@
     }
 }
 
-.form__textarea::placeholder {
-    @include font(null, null, 12px, 1.17, 0.01em);
+.form-field__textarea::placeholder {
+    @include font(null, null, 14px, 1.14, 0.01em);
     color: rgba(117, 117, 117, 0.5);
+
+    @include desk {
+        @include font(null, null, 12px, 1.17, 0.01em);
+    }
 }

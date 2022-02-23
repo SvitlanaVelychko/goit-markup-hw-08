@@ -336,9 +336,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   display: block;
-  width: 450px;
-  /*width: 528px;
-    min-height: 581px;*/
+  max-width: 450px;
+  width: 100%;
   padding: 40px;
   border-radius: 4px;
   background-color: var(--white-color);
@@ -348,6 +347,12 @@ body {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.5);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
 }
 
 .modal-close-btn {
@@ -378,9 +383,16 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
-  /*@include font(null, 700, 20px, 1.15, null);*/
   text-align: center;
   color: var(--title-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+  }
 }
 
 .modal-form__button {
@@ -459,11 +471,19 @@ body {
   border: 1px solid var(--accent-color);
 }
 
-.form__textarea::placeholder {
-  font-size: 12px;
-  line-height: 1.17;
+.form-field__textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+@media screen and (min-width: 1200px) {
+  .form-field__textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
 }
 
 .checkbox {
@@ -471,22 +491,42 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: right;
-  width: 370px;
-  /*width: 423px;*/
+  max-width: 370px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox {
+    max-width: 425px;
+  }
 }
 
 .checkbox__text {
-  width: 346px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.17;
-  /*@include font(null, null, 14px, 1.71, null);*/
   color: var(--primary-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox__text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox__link {
   display: inline-block;
   text-decoration: underline;
   color: var(--accent-color);
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox__link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox__input {
@@ -500,7 +540,7 @@ body {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  margin-right: 7px;
+  margin-right: 8px;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
   background-color: transparent;
