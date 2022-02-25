@@ -249,19 +249,19 @@ body.modal-open {
 
 @media screen and (min-width: 480px) {
   .hero {
-    width: 480px;
+    max-width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    width: 768px;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
-    width: 1600px;
+    max-width: 1600px;
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -675,6 +675,7 @@ body.modal-open {
 }
 
 .team {
+  width: 100%;
   background-color: var(--secondary-background-color);
 }
 
