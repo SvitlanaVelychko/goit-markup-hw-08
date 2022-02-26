@@ -133,6 +133,34 @@ body.modal-open {
 .header-nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 80px;
+}
+
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button:hover, .menu-button:focus {
+  fill: var(--accent-color);
+}
+
+.menu-button__icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .menu-button__icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .menu-button__icon-menu {
+  display: none;
 }
 
 .logo {
@@ -142,7 +170,6 @@ body.modal-open {
   letter-spacing: 0.03em;
   font-family: Raleway;
   color: var(--accent-color);
-  margin-bottom: 20px;
 }
 
 .logo__studio {
@@ -511,6 +538,7 @@ body.modal-open {
 }
 
 .checkbox__text {
+  margin-right: 0;
   font-size: 12px;
   line-height: 1.17;
   color: var(--primary-text-color);
@@ -640,7 +668,7 @@ body.modal-open {
   letter-spacing: 0.03em;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.5px) {
   .about {
     display: none;
   }
@@ -978,6 +1006,7 @@ body.modal-open {
 
 .address-block__logo {
   display: inline-block;
+  margin-bottom: 20px;
 }
 
 .address-list {

@@ -3,9 +3,35 @@
 }
 
 .header-container {
-    @include centeredFlex(flex,center, null);
+    @include centeredFlex(flex, center, null);
 }
 
 .header-nav {
-    @include centeredFlex(flex,center, null);
+    @include centeredFlex(flex, center, space-between);
+    width: 100%;
+    min-height: 80px;
+}
+
+.menu-button {
+    @include centeredFlex(inline-flex, center, null);
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &:hover, &:focus {
+        fill: var(--accent-color);
+    }
+}
+
+.menu-button__icon-cross {
+    display: none;
+
+    .menu-button.is-open & {
+        display: block;
+    }
+}
+
+.menu-button.is-open .menu-button__icon-menu {
+    display: none;
 }
