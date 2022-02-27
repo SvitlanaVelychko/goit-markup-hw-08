@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     border-bottom: 1px solid var(--border-header-color);
 }
 
@@ -34,4 +35,18 @@
 
 .menu-button.is-open .menu-button__icon-menu {
     display: none;
+}
+
+.menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background-color: var(--white-color);
+    padding: 48px 40px;
+    @include font(null, 500, 40px, 1.18, 0.02em);
+
+
 }

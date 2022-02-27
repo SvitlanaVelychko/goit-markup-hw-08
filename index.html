@@ -20,7 +20,11 @@
             <nav class="header-nav">
                 <a href="" lang="en" class="logo">Web<span lang="en" class="logo logo__studio">Studio</span>
                 </a>
-                <button type="button" class="menu-button is-open" 
+                <button 
+                type="button" 
+                class="menu-button is-open" 
+                aria-expended="false" 
+                aria-controls="menu-container"
                 data-menu-button>
                     <svg 
                         width="40" 
@@ -31,11 +35,16 @@
                         <use class="menu-button__icon menu-button__icon-menu" href="./images/icons.svg#menu"></use>
                     </svg>
                 </button>
-                <!--ul class="site-nav list">
+                <div 
+                lass="menu-container is-open" 
+                id="menu-container" 
+                data-menu>
+                <ul class="site-nav list">
                     <li class="site-nav__item"><a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a></li>
                     <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
                     <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
-                </ul-->
+                </ul>
+            </div>
             </nav>
             <!--ul class="header-contact list">
                 <li class="header-contact__item">
