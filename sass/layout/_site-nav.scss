@@ -1,7 +1,12 @@
-/*.site-nav {
+.site-nav {
+    @include tab {
     @include centeredFlex(flex, center, null);
-    margin-left: 93px;
+    }
 } 
+
+.site-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+}
 
 .site-nav__item:not(:first-child) {
     margin-left: 50px;
@@ -13,9 +18,12 @@
     padding-bottom: 32px;
 
     color: var(--title-text-color);
-    @include font(null, 500, 14px, 1.14, 0.02em);
 
-    transition: color 250ms var(--timing-function);
+    @include tab {
+        @include font(null, 500, 14px, 1.14, 0.02em);
+
+        transition: color 250ms var(--timing-function);
+    }
 
     &:hover, &:focus {
         color: var(--accent-color);
@@ -26,6 +34,7 @@
     position: relative;
     color: var(--accent-color);
 
+    @include tab {
     &::after {
         content: '';
         position: absolute;
@@ -36,5 +45,6 @@
         height: 4px;
         border-radius: 2px;
         background-color: var(--accent-color);
-    }
-}*/
+        }
+    }   
+}

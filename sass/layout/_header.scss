@@ -10,43 +10,5 @@
 .header-nav {
     @include centeredFlex(flex, center, space-between);
     width: 100%;
-    min-height: 80px;
-}
-
-.menu-button {
-    @include centeredFlex(inline-flex, center, null);
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-
-    &:hover, &:focus {
-        fill: var(--accent-color);
-    }
-}
-
-.menu-button__icon-cross {
-    display: none;
-
-    .menu-button.is-open & {
-        display: block;
-    }
-}
-
-.menu-button.is-open .menu-button__icon-menu {
-    display: none;
-}
-
-.menu-container {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-
-    background-color: var(--white-color);
-    padding: 48px 40px;
-    @include font(null, 500, 40px, 1.18, 0.02em);
-
-
+    min-height: 60px;
 }
