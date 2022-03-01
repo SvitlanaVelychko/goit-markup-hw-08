@@ -4,11 +4,12 @@
     }
 } 
 
-.site-nav__item:not(:last-child) {
+.site-nav___item {
     margin-bottom: 32px;
 }
 
-.site-nav__item:not(:first-child) {
+
+/*.site-nav__item:not(:first-child) {
     margin-left: 50px;
 }
 
@@ -47,4 +48,4 @@
         background-color: var(--accent-color);
         }
     }   
-}
+}*/
