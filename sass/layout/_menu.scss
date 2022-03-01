@@ -4,6 +4,7 @@
     padding: 0;
     border: none;
     background-color: transparent;
+    z-index: 1;
 
     &:hover, &:focus {
         fill: var(--accent-color);
@@ -16,12 +17,13 @@
 
 .menu-button__icon-cross {
     display: none;
-    background-color: transparent;
-    
 
     .menu-button.is-open & {
         display: block;
     }
+}
+.menu-container.is-open .menu-button__icon-cross {
+    display: block;
 }
 
 .menu-button.is-open .menu-button__icon-menu {
@@ -31,15 +33,14 @@
 .menu-container {
     padding: 48px 40px;
     background-color: var(--white-color);
-    @include font(null, 500, 40px, 1.18, 0.02em);
 
     @media screen and (max-width: 767px) {
         display: none;
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        min-height: 769px;
+        width: 100vw;
+        min-height: 100vh;
 
         &.is-open {
             display: block;

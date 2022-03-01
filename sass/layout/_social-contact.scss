@@ -1,0 +1,14 @@
+.social-contact {
+    @include centeredFlex(flex, center, flex-start);
+}
+
+.social-contact__item:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid var(--modal-input-color);
+}
+
+.social-contact__link {
+    @include font(null, 500, 18px, 1.22, 0.02em);
+    color: var(--accent-color);
+}

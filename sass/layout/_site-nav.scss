@@ -1,4 +1,5 @@
 .site-nav {
+    margin-bottom: 302px;
     @include tab {
     @include centeredFlex(flex, center, null);
     }
@@ -8,11 +9,14 @@
     margin-left: 50px;
 }*/
 
-.site-nav__link {
-    padding-top: 32px;
-    padding-bottom: 32px;
+.site-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+}
 
+.site-nav__link {
+    display: inline-block;
     color: var(--title-text-color);
+    @include font(null, 500, 40px, 1.18, 0.02em);
 
     @include tab {
         @include font(null, 500, 14px, 1.14, 0.02em);
@@ -42,4 +46,4 @@
         background-color: var(--accent-color);
         }
     }   
-}*/
+}
