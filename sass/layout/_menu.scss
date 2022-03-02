@@ -1,14 +1,10 @@
 .menu-button {
-    @include centeredFlex(inline-flex, center, null);
+    @include centeredFlex(inline-flex, center, center);
     margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
     z-index: 1;
-
-    &:hover, &:focus {
-        fill: var(--accent-color);
-    }
 
     @include tab {
         display: none;
@@ -21,9 +17,6 @@
     .menu-button.is-open & {
         display: block;
     }
-}
-.menu-container.is-open .menu-button__icon-cross {
-    display: block;
 }
 
 .menu-button.is-open .menu-button__icon-menu {
@@ -40,7 +33,7 @@
         top: 0;
         left: 0;
         width: 100vw;
-        min-height: 100vh;
+        height: 100vh;
 
         &.is-open {
             display: block;
