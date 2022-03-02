@@ -6,6 +6,10 @@
     background-color: transparent;
     z-index: 1;
 
+    &:hover {
+        fill: var(--accent-color);
+    }
+
     @include tab {
         display: none;
     }
@@ -24,7 +28,7 @@
 }
 
 .menu-container {
-    padding: 48px 40px;
+    padding: 48px 30px;
     background-color: var(--white-color);
 
     @media screen and (max-width: 767px) {
