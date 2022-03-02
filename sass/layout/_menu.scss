@@ -7,7 +7,7 @@
     z-index: 1;
 
     &:hover {
-        fill: var(--accent-color);
+        fill: var(--accent-color); 
     }
 
     @include tab {
@@ -28,7 +28,7 @@
 }
 
 .menu-container {
-    padding: 48px 30px;
+    padding: 48px 40px;
     background-color: var(--white-color);
 
     @media screen and (max-width: 767px) {
