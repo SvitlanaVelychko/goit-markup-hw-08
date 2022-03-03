@@ -1,5 +1,9 @@
 .social-contact {
     @include centeredFlex(flex, center, flex-start);
+
+    @include tab {
+        display: none;
+    }
 }
 
 .social-contact__item:not(:last-child) {

@@ -1,17 +1,19 @@
 .site-nav {
     margin-bottom: 302px;
-    
+
     @include tab {
-    @include centeredFlex(flex, center, null);
+    @include centeredFlex();
+    margin: 0;
     }
 } 
 
-/*.site-nav__item:not(:first-child) {
-    margin-left: 50px;
-}*/
-
 .site-nav__item:not(:last-child) {
     margin-bottom: 32px;
+
+    @include tab {
+        margin-bottom: 0;
+        margin-right: 50px;
+    }
 }
 
 .site-nav__link {
@@ -19,11 +21,14 @@
     color: var(--title-text-color);
     @include font(null, 500, 40px, 1.18, 0.02em);
 
-    /*&:hover, &:focus {
-        color: var(--accent-color);*/
-
+    &:hover, &:focus {
+        color: var(--accent-color);
+    }
+    
     @include tab {
         @include font(null, 500, 14px, 1.14, 0.02em);
+        padding-top: 32px;
+        padding-bottom: 32px;
 
         transition: color 250ms var(--timing-function);
     }
