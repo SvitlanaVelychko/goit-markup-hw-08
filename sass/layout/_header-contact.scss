@@ -4,8 +4,12 @@
     margin-bottom: 64px;
 
     @include tab {
+        flex-direction: column;
+        align-items: baseline;
+        padding-top: 21px;
+        padding-bottom: 21px;
         margin-bottom: 0;
-        margin-left: auto;
+        margin-left: 84px;
     }
 
     @include desk {
@@ -15,6 +19,11 @@
 }
 
 .header-contact__item:not(:first-child) {
+
+    @include tab {
+        margin-top: 10px;
+    }
+
     @include desk {
     margin-left: 50px;
     }
@@ -38,13 +47,15 @@
 .header-contact__link-tel {
     @include tab {
     @include centeredFlex;
-    flex-direction: column;
-    padding-top: 32px;
-    padding-bottom: 32px;
     margin: 0;
 
     color: var(--primary-text-color);
-    @include font(null, 500, 14px, 1.14, 0.02em);
+    @include font(null, 500, 12px, 1.17, 0.02em);
+    }
+
+    @include desk {
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     transition: color 250ms var(--timing-function);
 
@@ -59,7 +70,35 @@
     display: none;
 
     @include tab {
-        margin-right: 10px;
+        display: block;
+        margin-right: 8px;
         fill: currentColor;
+    }
+
+    @include desk {
+        margin-right: 10px;
+    }
+}
+
+.header-contact__icon-mail {
+    @include tab {
+        width: 14px;
+        height: 10px;
+    }
+
+    @include desk {
+        width: 16px;
+        height: 12px;
+    }
+}
+
+.header-contact__icon-tel {
+    @include tab {
+        width: 10px;
+        height: 14px;
+    }
+
+    @include desk {
+        height: 16px;
     }
 }

@@ -9,10 +9,11 @@
 
 .header-nav {
     @include centeredFlex(flex, center, space-between);
-    width: 100vw;
+    width: 100%;
     min-height: 60px;
 
     @include tab {
+        @include centeredFlex(flex, center, start);
         width: 100%;
         min-width: 80px;
     }

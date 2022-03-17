@@ -38,7 +38,7 @@
 }
 
 .menu-container {
-    padding: 48px 40px;
+    padding: 40px 30px;
     background-color: var(--white-color);
 
     @media screen and (max-width: 767.5px) {
@@ -57,5 +57,10 @@
     @include tab {
         @include centeredFlex(flex, center, null);
         padding: 0;
+        margin-left: auto;
+    }
+
+    @include desk {
+        
     }
 }
