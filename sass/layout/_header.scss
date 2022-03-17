@@ -17,4 +17,8 @@
         width: 100%;
         min-width: 80px;
     }
+
+    @include desk {
+        @include centeredFlex(flex, center, null);
+    }
 }

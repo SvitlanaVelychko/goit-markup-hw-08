@@ -9,12 +9,13 @@
         padding-top: 21px;
         padding-bottom: 21px;
         margin-bottom: 0;
-        margin-left: 84px;
+        margin-left: auto;
     }
 
     @include desk {
-        @include centeredFlex(flex, center, null);
-        margin-left: auto;
+        @include centeredFlex();
+        flex-direction: row;
+        padding: 0;
     }
 }
 
@@ -26,6 +27,7 @@
 
     @include desk {
     margin-left: 50px;
+    margin-top: 0;
     }
 }
 
@@ -56,6 +58,7 @@
     @include desk {
     padding-top: 32px;
     padding-bottom: 32px;
+    @include font(null, 500, 14px, 1.14, 0.02em);
 
     transition: color 250ms var(--timing-function);
 

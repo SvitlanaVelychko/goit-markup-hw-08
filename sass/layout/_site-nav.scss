@@ -22,14 +22,15 @@
     @include font(null, 500, 40px, 1.18, 0.02em);
     
     @include tab {
-        @include font(null, 500, 14px, 1.14, 0.02em);
+        display: block;
         padding-top: 32px;
         padding-bottom: 32px;
-
-        transition: color 250ms var(--timing-function);
+        @include font(null, 500, 14px, 1.14, 0.02em);
     }
 
     @include desk {
+    transition: color 250ms var(--timing-function);
+
         &:hover, &:focus {
         color: var(--accent-color);
         }

@@ -149,6 +149,13 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .logo {
   font-weight: 700;
   font-size: 24px;
@@ -184,7 +191,7 @@ body.modal-open {
   padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media screen and (min-width: 768px) {
@@ -235,6 +242,7 @@ body.modal-open {
   }
   .menu-container.is-open {
     display: block;
+    z-index: 1;
   }
 }
 
@@ -242,8 +250,15 @@ body.modal-open {
   .menu-container {
     display: flex;
     align-items: center;
+    width: 100%;
     padding: 0;
-    margin-left: auto;
+    margin-left: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    margin-left: 93px;
   }
 }
 
@@ -282,17 +297,20 @@ body.modal-open {
 
 @media screen and (min-width: 768px) {
   .site-nav__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    transition: color 250ms var(--timing-function);
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .site-nav__link {
+    transition: color 250ms var(--timing-function);
+  }
   .site-nav__link:hover, .site-nav__link:focus {
     color: var(--accent-color);
   }
@@ -329,7 +347,7 @@ body.modal-open {
     padding-top: 21px;
     padding-bottom: 21px;
     margin-bottom: 0;
-    margin-left: 84px;
+    margin-left: auto;
   }
 }
 
@@ -337,7 +355,9 @@ body.modal-open {
   .header-contact {
     display: flex;
     align-items: center;
-    margin-left: auto;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0;
   }
 }
 
@@ -350,6 +370,7 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .header-contact__item:not(:first-child) {
     margin-left: 50px;
+    margin-top: 0;
   }
 }
 
@@ -392,6 +413,10 @@ body.modal-open {
   .header-contact__link-tel {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
     transition: color 250ms var(--timing-function);
   }
   .header-contact__link-mail:hover, .header-contact__link-mail:focus,
