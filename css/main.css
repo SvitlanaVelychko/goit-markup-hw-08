@@ -52,7 +52,6 @@ a {
 img {
   display: block;
   max-width: 100%;
-  width: 100%;
   height: auto;
 }
 
@@ -211,6 +210,10 @@ body.modal-open {
 
 .menu-button.is-open .menu-button__icon-cross:hover, .menu-button.is-open .menu-button__icon-cross:focus {
   fill: var(--accent-color);
+}
+
+.menu-button.is-open .menu-button__icon-cross:hover .site-nav__link--current, .menu-button.is-open .menu-button__icon-cross:focus .site-nav__link--current {
+  color: var(--title-text-color);
 }
 
 .menu-button__icon-menu {
