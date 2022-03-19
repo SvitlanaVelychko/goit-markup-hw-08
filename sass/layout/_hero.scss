@@ -9,7 +9,7 @@
 
     background-color: var(--background-color-hero);  
     background-image: linear-gradient(to right, var(--background-color-gradient), var(--background-color-gradient)), 
-    url(../images/hero-mobile.jpg);
+    url(../images/hero-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -17,7 +17,7 @@
 
     @include retina {
             background-image: linear-gradient(to right, var(--background-color-gradient), var(--background-color-gradient)), 
-            url(../images/hero-mobile2x.jpg);
+            url(../images/hero-mob2x.jpg);
         }
 
     @include tab {
