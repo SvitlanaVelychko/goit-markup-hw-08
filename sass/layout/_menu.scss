@@ -20,10 +20,6 @@
 
         &:hover, &:focus {
             fill: var(--accent-color); 
-
-            .site-nav__link--current {
-                color: var(--title-text-color);
-            }
         }
     }
 }

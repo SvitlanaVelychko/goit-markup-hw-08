@@ -212,10 +212,6 @@ body.modal-open {
   fill: var(--accent-color);
 }
 
-.menu-button.is-open .menu-button__icon-cross:hover .site-nav__link--current, .menu-button.is-open .menu-button__icon-cross:focus .site-nav__link--current {
-  color: var(--title-text-color);
-}
-
 .menu-button__icon-menu {
   display: block;
   fill: var(--black-color);
@@ -504,28 +500,36 @@ body.modal-open {
 }
 
 .hero {
+  max-width: 480px;
   height: 400px;
   padding-top: 118px;
   padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
   background-color: var(--background-color-hero);
-  background-image: linear-gradient(to right, var(--background-color-gradient), var(--background-color-gradient)), url(../images/hero.jpg);
+  background-image: linear-gradient(to right, var(--background-color-gradient), var(--background-color-gradient)), url(../images/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  text-align: center;
 }
 
-@media screen and (min-width: 480px) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    max-width: 480px;
+    background-image: linear-gradient(to right, var(--background-color-gradient), var(--background-color-gradient)), url(../images/hero-mobile2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
+    background-image: linear-gradient(to right, var(--background-color-gradient), var(--background-color-gradient)), url(../images/hero-tab.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, var(--background-color-gradient), var(--background-color-gradient)), url(../images/hero-tab2x.jpg);
   }
 }
 
@@ -535,6 +539,13 @@ body.modal-open {
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: linear-gradient(to right, var(--background-color-gradient), var(--background-color-gradient)), url(../images/hero.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, var(--background-color-gradient), var(--background-color-gradient)), url(../images/hero2x.jpg);
   }
 }
 
