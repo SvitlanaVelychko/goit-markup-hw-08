@@ -1235,6 +1235,25 @@ body.modal-open {
   transform: translateY(0);
 }
 
+@media screen and (max-width: 479px) {
+  .product__text {
+    font-size: 3.5vw;
+    line-height: 1.56;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product__text {
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .product__text {
+    padding: 63px 24px;
+  }
+}
+
 .product__meta {
   height: 100%;
   padding: 20px 24px;

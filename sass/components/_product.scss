@@ -34,6 +34,18 @@
     .product__link:focus & {
     transform: translateY(0);
     }
+
+    @media screen and (max-width: 479px) {
+        @include font(null, null, 3.5vw, 1.56, null);
+    }
+
+    @include tab {
+        padding: 49px 24px;
+    }
+
+    @include desk {
+        padding: 63px 24px;
+    }
 }
 
 .product__meta {
