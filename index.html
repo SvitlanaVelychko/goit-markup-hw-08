@@ -146,7 +146,7 @@
                     <li class="feature-list__item">
                         <div class="feature-list__icon">
                             <svg width="70" height="70">
-                                <use href="images/icons.svg#antenna"></use>
+                                <use href="./images/icons.svg#antenna"></use>
                             </svg>
                         </div>
                         <h3 class="feature-list__title">Внимание к деталям</h3>
@@ -155,7 +155,7 @@
                     <li class="feature-list__item">
                         <div class="feature-list__icon">
                             <svg width="70" height="70">
-                                <use href="images/icons.svg#clock"></use>
+                                <use href="./images/icons.svg#clock"></use>
                             </svg>
                         </div>
                         <h3 class="feature-list__title">Пунктуальность</h3>
@@ -164,7 +164,7 @@
                     <li class="feature-list__item">
                         <div class="feature-list__icon">
                             <svg width="70" height="70">
-                                <use href="images/icons.svg#diagram"></use>
+                                <use href="./images/icons.svg#diagram"></use>
                             </svg>
                         </div>
                         <h3 class="feature-list__title">Планирование</h3>
@@ -173,7 +173,7 @@
                     <li class="feature-list__item">
                         <div class="feature-list__icon">
                             <svg width="70" height="70">
-                                <use href="images/icons.svg#astronaut"></use>
+                                <use href="./images/icons.svg#astronaut"></use>
                             </svg>
                         </div>
                         <h3 class="feature-list__title">Современные технологии</h3>
@@ -188,30 +188,42 @@
                 <h2 class="about__title section__title">Чем мы занимаемся</h2>
                 <ul class="about-list list">
                     <li class="about-list__item">
-                        <img 
-                        src="./images/box1.jpg" 
-                        alt="разработчик верстает сайт" 
-                        width="370" 
-                        height="294"
-                        />
+                        <picture>
+                            <source srcset="./images/box1.webp 1x, ./images/box1-2x.webp 2x"
+                            type="image/webp" />
+                            <source srcset="./images/box1.jpg 1x, ./images/box1-2x.jpg 2x" 
+                            type="image/jpg" />
+                            <img 
+                                src="./images/box1.jpg" 
+                                alt="разработчик верстает сайт" 
+                            />
+                        </picture>
                         <p class="about-list__label">Десктопные приложения</p>
                     </li>
                     <li class="about-list__item">
-                        <img 
-                        src="./images/box2.jpg" 
-                        alt="разработчик создаёт мобильное приложение" 
-                        width="370" 
-                        height="294" 
-                        /> 
+                        <picture>
+                            <source srcset="./images/box2.webp 1x, ./images/box2-2x.webp 2x" 
+                                type="image/webp" />
+                            <source srcset="./images/box2.jpg 1x, ./images/box2-2x.jpg 2x" 
+                                type="image/jpg" />
+                            <img 
+                                src="./images/box2.jpg" 
+                                alt="разработчик создаёт мобильное приложение" 
+                            />
+                        </picture>
                         <p class="about-list__label">Мобильные приложения</p>
                     </li>
                     <li class="about-list__item">
-                        <img
-                        src="./images/box3.jpg" 
-                        alt="дизайнер разрабатывает логотип сайта"
-                        width="370" 
-                        height="294"
-                        />
+                        <picture>
+                            <source srcset="./images/box3.webp 1x, ./images/box3-2x.webp 2x" 
+                                type="image/webp" />
+                            <source srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x" 
+                                type="image/jpg" />
+                            <img
+                                src="./images/box3.jpg" 
+                                alt="дизайнер разрабатывает логотип сайта"
+                            />
+                        </picture>
                         <p class="about-list__label">Дизайнерские решения</p>
                     </li>
                 </ul>
@@ -223,12 +235,30 @@
                 <h2 class="team__title section__title">Наша команда</h2>
                 <ul class="team-list list">
                     <li class="team-list__item">
-                        <img 
-                        src="./images/img1.jpg" 
-                        alt="член команды"
-                        width="270"
-                        height="260"
-                        />
+                        <picture>
+                            <source srcset="./images/img1.webp 1x, ./images/img1-2x.webp 2x" 
+                                type="image/webp" 
+                                media="(min-width: 1200px)" />
+                            <source srcset="./images/img1.jpg 1x, ./images/img1-2x.jpg 2x"
+                                type="image/jpg"
+                                media="(min-width: 1200px)" />
+                            <source srcset="./images/img1-tab.webp 1x, ./images/img1-tab2x.webp 2x" 
+                                type="image/webp" 
+                                media="(min-width: 768px)" />
+                            <source srcset="./images/img1-tab.jpg 1x, ./images/img1-tab2x.jpg 2x"
+                                type="image/jpg" 
+                                media="(min-width: 768px)" />
+                            <source srcset="./images/img1-mob.webp 1x, ./images/img1-mob2x.webp 2x" 
+                                type="image/webp"
+                                media="(min-width: 320px)" />
+                            <source srcset="./images/img1-mob.jpg 1x, ./images/img1-mob2x.jpg 2x"
+                                type="image/jpg" 
+                                media="(min-width: 320px)" />
+                            <img 
+                                src="./images/img1.jpg" 
+                                alt="член команды"
+                            />
+                        </picture>
                         <div class="team-list__meta">
                             <h3 class="team-list__name">Игорь Демьяненко</h3>
                             <p lang="en" class="team-list__position">Product Designer</p>
@@ -261,12 +291,30 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img 
-                        src="./images/img2.jpg" 
-                        alt="член команды"
-                        width="270"
-                        height="260" 
-                        />
+                        <picture>
+                            <source srcset="./images/img2.webp 1x, ./images/img2-2x.webp 2x" 
+                                type="image/webp"  
+                                media="(min-width: 1200px)" />
+                            <source srcset="./images/img2.jpg 1x, ./images/img2-2x.jpg 2x"
+                                type="image/jpg" 
+                                media="(min-width: 1200px)" />
+                            <source srcset="./images/img2-tab.webp 1x, ./images/img2-tab2x.webp 2x"
+                                type="image/webp" 
+                                media="(min-width: 768px)" />
+                            <source srcset="./images/img2-tab.jpg 1x, ./images/img2-tab2x.jpg 2x" 
+                                type="image/jpg" 
+                                media="(min-width: 768px)" />
+                            <source srcset="./images/img2-mob.webp 1x, ./images/img2-mob2x.webp 2x" 
+                                type="image/webp" 
+                                media="(min-width: 320px)" />
+                            <source srcset="./images/img2-mob.jpg 1x, ./images/img2-mob2x.jpg 2x" 
+                                type="image/jpg" 
+                                media="(min-width: 320px)" />
+                            <img 
+                                src="./images/img2.jpg" 
+                                alt="член команды" 
+                            />
+                        </picture>
                         <div class="team-list__meta">
                             <h3 class="team-list__name">Ольга Репина</h3>
                             <p lang="en" class="team-list__position">Frontend Developer</p>
@@ -299,12 +347,30 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img 
-                        src="./images/img3.jpg" 
-                        alt="член команды"
-                        width="270"
-                        height="260"
-                        />
+                        <picture>
+                            <source srcset="./images/img3.webp 1x, ./images/img3-2x.webp 2x" 
+                                type="image/webp" 
+                                media="(min-width: 1200px)" />
+                            <source srcset="./images/img3.jpg 1x, ./images/img3-2x.jpg 2x" 
+                                type="image/jpg" 
+                                media="(min-width: 1200px)" />
+                            <source srcset="./images/img3-tab.webp 1x, ./images/img3-tab2x.webp 2x" 
+                                type="image/webp" 
+                                media="(min-width: 768px)" />
+                            <source srcset="./images/img3-tab.jpg 1x, ./images/img3-tab2x.jpg 2x" 
+                                type="image/jpg" 
+                                media="(min-width: 768px)" />
+                            <source srcset="./images/img3-mob.webp 1x, ./images/img3-mob2x.webp 2x" 
+                                type="image/webp" 
+                                media="(min-width: 320px)" />
+                            <source srcset="./images/img3-mob.jpg 1x, ./images/img3-mob2x.jpg 2x" 
+                                type="image/jpg" 
+                                media="(min-width: 320px)" />
+                            <img 
+                                src="./images/img3.jpg" 
+                                alt="член команды"
+                            />
+                        </picture>
                         <div class="team-list__meta">
                             <h3 class="team-list__name">Николай Тарасов</h3>
                             <p lang="en" class="team-list__position">Marketing</p>
@@ -337,12 +403,30 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img 
-                        src="./images/img4.jpg" 
-                        alt="член команды"
-                        width="270"
-                        height="260" 
-                        />
+                        <picture>
+                            <source srcset="./images/img4.webp 1x, ./images/img4-2x.webp 2x" 
+                                type="image/webp" 
+                                media="(min-width: 1200px)" />
+                            <source srcset="./images/img4.jpg 1x, ./images/img4-2x.jpg 2x" 
+                                type="image/jpg"
+                                media="(min-width: 1200px)" />
+                            <source srcset="./images/img4-tab.webp 1x, ./images/img4-tab2x.webp 2x" 
+                                type="image/webp" 
+                                media="(min-width: 768px)" />
+                            <source srcset="./images/img4-tab.jpg 1x, ./images/img4-tab2x.jpg 2x" 
+                                type="image/jpg" 
+                                media="(min-width: 768px)" />
+                            <source srcset="./images/img4-mob.webp 1x, ./images/img4-mob2x.webp 2x" 
+                                type="image/webp" 
+                                media="(min-width: 320px)" />
+                            <source srcset="./images/img4-mob.jpg 1x, ./images/img4-mob2x.jpg 2x" 
+                                type="image/jpg" 
+                                media="(min-width: 320px)" />
+                            <img 
+                                src="./images/img4.jpg" 
+                                alt="член команды" 
+                            />
+                        </picture>
                         <div class="team-list__meta">
                             <h3 class="team-list__name">Михаил Ермаков</h3>
                             <p lang="en" class="team-list__position">UI Designer</p>
@@ -385,42 +469,42 @@
                     <li class="client-list__item">
                         <a href="" class="client-list__link">
                             <svg class="client-list__icon" width="106" height="60">
-                                <use href="images/icons.svg#client1"></use>
+                                <use href="./images/icons.svg#client1"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="client-list__item">
                         <a href="" class="client-list__link">
                             <svg class="client-list__icon" width="106" height="60">
-                                <use href="images/icons.svg#client2"></use>
+                                <use href="./images/icons.svg#client2"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="client-list__item">
                         <a href="" class="client-list__link">
                             <svg class="client-list__icon" width="106" height="60">
-                                <use href="images/icons.svg#client3"></use>
+                                <use href="./images/icons.svg#client3"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="client-list__item">
                         <a href="" class="client-list__link">
                             <svg class="client-list__icon" width="106" height="60">
-                                <use href="images/icons.svg#client4"></use>
+                                <use href="./images/icons.svg#client4"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="client-list__item">
                         <a href="" class="client-list__link">
                             <svg class="client-list__icon" width="106" height="60">
-                                <use href="images/icons.svg#client5"></use>
+                                <use href="./mages/icons.svg#client5"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="client-list__item">
                         <a href="" class="client-list__link">
                             <svg class="client-list__icon" width="106" height="60">
-                                <use href="images/icons.svg#client6"></use>
+                                <use href="./images/icons.svg#client6"></use>
                             </svg>
                         </a>
                     </li>
