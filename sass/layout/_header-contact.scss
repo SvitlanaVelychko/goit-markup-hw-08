@@ -6,16 +6,14 @@
     @include tab {
         flex-direction: column;
         align-items: baseline;
-        padding-top: 21px;
-        padding-bottom: 21px;
         margin-bottom: 0;
-        margin-left: auto;
     }
 
     @include desk {
         @include centeredFlex();
         flex-direction: row;
         padding: 0;
+        margin-left: auto;
     }
 }
 

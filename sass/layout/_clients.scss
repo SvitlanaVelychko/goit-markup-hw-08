@@ -2,10 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
-
-    @include desk {
-        margin: 0 -15px;
-    }
 }
 
 .client-list__item {
@@ -18,7 +14,6 @@
 
     @include desk {
         flex-basis: calc((100% - 6*30px) / 6);
-        margin: 0 15px;
     }
 }
 

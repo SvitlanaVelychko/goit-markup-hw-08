@@ -1,9 +1,6 @@
 .site-nav {
-    margin-bottom: 302px;
-
     @include tab {
     @include centeredFlex();
-    margin: 0;
     }
 } 
 

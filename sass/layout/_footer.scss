@@ -12,7 +12,7 @@
 
 .footer__container {
     @include tab {
-        @include centeredFlex(flex, baseline, null);
+        @include centeredFlex(flex, baseline, space-around);
         flex-wrap: wrap;
     }
 
@@ -22,31 +22,16 @@
 }
 
 .address-block {
-    @include tab {
-        margin-left: 61px;
-    }
+    margin-bottom: 60px;
 
     @include desk {
         margin-right: 70px;
-        margin-left: 0;
+        margin-bottom: 0;
     }
 }
 
 .address-block__logo {
-    display: inline-block;
     margin-bottom: 20px;
-}
-
-.address-list {
-    width: 232px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 60px;
-
-    @include desk {
-        width: 231px;
-        margin: 0;
-    }
 }
 
 .address-list__item:not(:last-child) {

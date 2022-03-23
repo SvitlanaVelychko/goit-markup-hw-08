@@ -1,12 +1,7 @@
 .checkbox {
     position: relative;
-    @include centeredFlex(inline-flex, center, right);
-    max-width: 370px;
-    width: 100%;
-
-    @include desk {
-        max-width: 425px;
-    }
+    @include centeredFlex(inline-flex, center, null);
+    padding-left: 20px;
 }
 
 .checkbox__text {

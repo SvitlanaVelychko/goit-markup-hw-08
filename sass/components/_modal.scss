@@ -8,9 +8,14 @@
     background-color: var(--background-overlay-modal);
     opacity: 1;
     overflow-y: scroll;
+    z-index: 3;
 
     transition: opacity 250ms var(--timing-function),
     visibility 250ms var(--timing-function);
+
+    @media screen and (max-width:479.5px) {
+        padding: 15px;
+    }
 }
 
 .backdrop.is-hidden {
@@ -42,10 +47,12 @@
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0.5);
     }
-}
 
-@include desk {
-    .modal {
+    @media screen and (max-width:479.5px) {
+        width: 90%;
+    }
+
+    @include desk {
         max-width: 528px;
     }
 }

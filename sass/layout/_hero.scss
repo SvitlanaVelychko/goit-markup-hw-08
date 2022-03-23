@@ -1,5 +1,5 @@
 .hero {
-    max-width: 480px;
+    max-width: 1600px;
     height: 400px;
     padding-top: 118px;
     padding-bottom: 118px;
@@ -21,7 +21,6 @@
         }
 
     @include tab {
-        max-width: 768px;
         background-image: linear-gradient(to right, var(--background-color-gradient), var(--background-color-gradient)), 
     url(../images/hero-tab.jpg);
 
@@ -32,7 +31,6 @@
     }
 
     @include desk {
-        max-width: 1600px;
         height: 600px;
         padding-top: 200px;
         padding-bottom: 200px;

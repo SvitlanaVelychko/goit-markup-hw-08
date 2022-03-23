@@ -240,7 +240,9 @@ body.modal-open {
     height: 100vh;
   }
   .menu-container.is-open {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     z-index: 1;
   }
 }
@@ -249,6 +251,7 @@ body.modal-open {
   .menu-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     padding: 0;
     margin-left: 88px;
@@ -261,16 +264,11 @@ body.modal-open {
   }
 }
 
-.site-nav {
-  margin-bottom: 302px;
-}
-
 @media screen and (min-width: 768px) {
   .site-nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
   }
 }
 
@@ -343,10 +341,7 @@ body.modal-open {
   .header-contact {
     flex-direction: column;
     align-items: baseline;
-    padding-top: 21px;
-    padding-bottom: 21px;
     margin-bottom: 0;
-    margin-left: auto;
   }
 }
 
@@ -357,6 +352,7 @@ body.modal-open {
     justify-content: center;
     flex-direction: row;
     padding: 0;
+    margin-left: auto;
   }
 }
 
@@ -500,7 +496,7 @@ body.modal-open {
 }
 
 .hero {
-  max-width: 480px;
+  max-width: 1600px;
   height: 400px;
   padding-top: 118px;
   padding-bottom: 118px;
@@ -522,7 +518,6 @@ body.modal-open {
 
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     background-image: linear-gradient(to right, var(--background-color-gradient), var(--background-color-gradient)), url(../images/hero-tab.jpg);
   }
 }
@@ -535,7 +530,6 @@ body.modal-open {
 
 @media screen and (min-width: 1200px) {
   .hero {
-    max-width: 1600px;
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -611,7 +605,14 @@ body.modal-open {
   background-color: var(--background-overlay-modal);
   opacity: 1;
   overflow-y: scroll;
+  z-index: 3;
   transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+}
+
+@media screen and (max-width: 479.5px) {
+  .backdrop {
+    padding: 15px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -637,6 +638,12 @@ body.modal-open {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.5);
+}
+
+@media screen and (max-width: 479.5px) {
+  .modal {
+    width: 90%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -780,15 +787,7 @@ body.modal-open {
   position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: right;
-  max-width: 370px;
-  width: 100%;
-}
-
-@media screen and (min-width: 1200px) {
-  .checkbox {
-    max-width: 425px;
-  }
+  padding-left: 20px;
 }
 
 .checkbox__text {
@@ -1006,13 +1005,7 @@ body.modal-open {
 
 .team-list__meta {
   padding-top: 30px;
-  padding-bottom: 24px;
-}
-
-@media screen and (min-width: 1200px) {
-  .team-list__meta {
-    padding-bottom: 30px;
-  }
+  padding-bottom: 30px;
 }
 
 .team-list__name {
@@ -1067,12 +1060,6 @@ body.modal-open {
   margin: -15px;
 }
 
-@media screen and (min-width: 1200px) {
-  .client-list {
-    margin: 0 -15px;
-  }
-}
-
 .client-list__item {
   flex-basis: calc((100% - 2*30px) / 2);
   margin: 15px;
@@ -1087,7 +1074,6 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .client-list__item {
     flex-basis: calc((100% - 6*30px) / 6);
-    margin: 0 15px;
   }
 }
 
@@ -1299,6 +1285,7 @@ body.modal-open {
   .footer__container {
     display: flex;
     align-items: baseline;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
 }
@@ -1310,36 +1297,19 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .address-block {
-    margin-left: 61px;
-  }
+.address-block {
+  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
   .address-block {
     margin-right: 70px;
-    margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
 .address-block__logo {
-  display: inline-block;
   margin-bottom: 20px;
-}
-
-.address-list {
-  width: 232px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .address-list {
-    width: 231px;
-    margin: 0;
-  }
 }
 
 .address-list__item:not(:last-child) {
@@ -1377,22 +1347,12 @@ body.modal-open {
 }
 
 .footer-social {
-  width: 206px;
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 60px;
 }
 
 @media screen and (min-width: 768px) {
   .footer-social {
-    margin-right: 74px;
     margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer-social {
-    margin: 0;
   }
 }
 
@@ -1417,14 +1377,6 @@ body.modal-open {
 
 .footer-social__icon {
   fill: currentColor;
-}
-
-@media screen and (min-width: 768px) {
-  .footer-form {
-    width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 @media screen and (min-width: 1200px) {

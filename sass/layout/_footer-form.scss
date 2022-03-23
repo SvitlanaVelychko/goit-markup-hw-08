@@ -1,10 +1,4 @@
 .footer-form {
-    @include tab {
-        width: 450px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     @include desk {
         width: 570px;
         margin-left: auto;

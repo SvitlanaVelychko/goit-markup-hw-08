@@ -50,13 +50,14 @@
         height: 100vh;
 
         &.is-open {
-            display: block;
+            @include centeredFlex(flex, null, space-between);
+            flex-direction: column;
             z-index: 1;
         }
     }
 
     @include tab {
-        @include centeredFlex(flex, center, null);
+        @include centeredFlex(flex, center, space-between);
         width: 100%;
         padding: 0;
         margin-left: 88px;

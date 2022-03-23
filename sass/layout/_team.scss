@@ -43,11 +43,7 @@
 
 .team-list__meta {
     padding-top: 30px;
-    padding-bottom: 24px;
-
-    @include desk {
-        padding-bottom: 30px;
-    }
+    padding-bottom: 30px;
 }
 
 .team-list__name {
