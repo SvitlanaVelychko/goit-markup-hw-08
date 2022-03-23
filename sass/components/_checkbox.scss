@@ -5,7 +5,6 @@
 }
 
 .checkbox__text {
-    margin-right: 0;
     @include font(null, null, 12px, 1.17, null);
     color: var(--primary-text-color);
 

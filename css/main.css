@@ -791,7 +791,6 @@ body.modal-open {
 }
 
 .checkbox__text {
-  margin-right: 0;
   font-size: 12px;
   line-height: 1.17;
   color: var(--primary-text-color);
