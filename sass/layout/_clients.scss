@@ -19,7 +19,6 @@
 
 .client-list__link {
     @include centeredFlex;
-    justify-content: center;
     width: 100%;
     height: 92px;
     border: 1px solid var(--icon-color);
